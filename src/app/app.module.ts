@@ -1,9 +1,9 @@
-import { NgModule } from '@angular/core';
+import { ApplicationInitStatus, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { AddPurchaseComponent } from './add-purchase/add-purchase.component';
+import { AddComponent } from './add/add.component';
 import { RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 
@@ -11,14 +11,17 @@ import { HomeComponent } from './home/home.component';
 @NgModule({
   declarations: [
     AppComponent,
-    AddPurchaseComponent,
+    AddComponent,
     HomeComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule, 
     RouterModule.forRoot([
-      {path: 'purchase', component: AddPurchaseComponent}
+      {path: 'purchase', component: AddComponent},
+      
+      // Add a calendar component?
+      // {path: '', pathMatch:'full', component: AppComponent}
     ])
   ],
   providers: [],
