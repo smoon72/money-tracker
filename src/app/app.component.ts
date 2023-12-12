@@ -7,8 +7,4 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Money Tracker';
-
-  addPurchase() {
-    console.log("purchased items");
-  }
 }
