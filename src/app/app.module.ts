@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { AddComponent } from './add/add.component';
 import { RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
+import { DeleteComponent } from './delete/delete.component';
 
 
 @NgModule({
@@ -13,13 +14,14 @@ import { HomeComponent } from './home/home.component';
     AppComponent,
     AddComponent,
     HomeComponent,
+    DeleteComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule, 
     RouterModule.forRoot([
       {path: 'purchase', component: AddComponent},
-      
+      {path: 'delete', component: DeleteComponent}
       // Add a calendar component?
       // {path: '', pathMatch:'full', component: AppComponent}
     ])
