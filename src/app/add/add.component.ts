@@ -18,13 +18,14 @@ export class AddComponent {
   ngOnInit(): void {
     // this.addForm = new FormGroup
     this.addForm = this.fb.group({
-      type: '',
-      amount: '',
-      tag: '',
+      type: '', //drop down menu
+      amount: '', //$
+      tag: '', //
       month: '',
-      date: '',
       year: ''
     });
   }
+} 
 
-}
+
+
