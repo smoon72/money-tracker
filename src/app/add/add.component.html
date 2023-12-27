@@ -1,0 +1,22 @@
+<!-- action attribute says where to senf form-data -->
+<div class="container">
+  <form action="" [formGroup]="addForm">
+      <!-- <label for=""> {{ addForm.get('amount')?.value }}</label> -->
+      <div class="form-group">
+        <label for="expenseI">Expense Type</label>
+        <input id="expenseI" type="text" class="form-control"
+                formControlName="expense"
+                required=""
+                title="Enter something here"
+                >
+        <small id="" class="form-text text-muted">Enter Expense Type</small>
+      </div>
+      <div>
+        <label for="">Amount</label>
+        <input type="number" class="form-control"
+                formControlName="amount">
+        <small class="form-text text-muted">Enter the amount in dollars</small>
+      </div>
+      <button class="btn btn-primary"  (click)="save()">save</button>
+  </form>
+</div>

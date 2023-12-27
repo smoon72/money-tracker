@@ -1,11 +1,13 @@
 import { ApplicationInitStatus, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { RouterModule } from '@angular/router';
+import { NgModel, ReactiveFormsModule } from '@angular/forms';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AddComponent } from './add/add.component';
-import { RouterModule } from '@angular/router';
-import { HomeComponent } from './home/home.component';
+import { FormComponent } from './form/form.component';
 import { DeleteComponent } from './delete/delete.component';
 
 
@@ -13,17 +15,18 @@ import { DeleteComponent } from './delete/delete.component';
   declarations: [
     AppComponent,
     AddComponent,
-    HomeComponent,
+    FormComponent,
     DeleteComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule, 
+    ReactiveFormsModule,
     RouterModule.forRoot([
       {path: 'purchase', component: AddComponent},
-      {path: 'delete', component: DeleteComponent}
-      // Add a calendar component?
-      // {path: '', pathMatch:'full', component: AppComponent}
+      {path: 'delete', component: DeleteComponent},
+      
+      {path: '', pathMatch:'full', redirectTo: 'purchase'}
     ])
   ],
   providers: [],

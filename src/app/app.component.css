@@ -1,0 +1,16 @@
+.money-sign {
+  max-width: 50px;
+}
+
+.top {
+  display: flex;
+}
+
+.form {
+  flex: 1;
+}
+
+.calendar {
+  background-color: brown;
+  flex: 1;
+}
